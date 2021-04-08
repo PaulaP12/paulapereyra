@@ -13,12 +13,12 @@ class CreateMotoTable extends Migration
      */
     public function up()
     {
-        Schema::create('moto', function (Blueprint $table) {
+        Schema::create('motos', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string("marca");
             $table->string("modelo");
             $table->string("color");
+            $table->timestamps();
         });
     }
 
