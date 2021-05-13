@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,9 @@ Route::get('/', function () {
 });
 
 Route::resource('item', 'App\Http\Controllers\ItemController');
+
+Route::get('index',[HomeController::class,'index'])->name('index')->middleware('domingo');
+Route::get('show',[HomeController::class,'show'])->name('show');
 
 /*
 Practica de rutas clase 21 de abril
